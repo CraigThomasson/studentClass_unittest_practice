@@ -10,15 +10,21 @@ class Student:
         self.naughty_list = False
         self._email = ''
 
+
     @property
     def full_name(self):
         return f"{self._first_name} {self._last_name}"
 
-    
+
     def alert_santa(self):
         self.naughty_list = True
+
 
 
     @property
     def email(self):
         return f'{self._first_name}.{self._last_name}@email.com'
+
+
+    def apply_extension(self, days):
+        self.end_date += timedelta(days=days)
